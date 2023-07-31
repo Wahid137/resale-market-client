@@ -53,7 +53,7 @@ const Login = () => {
                                 {...register("email", { required: "Email Address is required" })}
                                 className="border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-teal-600 focus:ring-0 border-0 w-full h-10"
                                 placeholder='Email Address' />
-                            <label for="email" class="absolute left-0 top-3 text-gray-600 text-sm transition-all">Email address</label>
+                            <label for="email" className="absolute left-0 top-3 text-gray-600 text-sm transition-all">Email address</label>
                             {errors.email && <p className="text-red-600">{errors.email?.message}</p>}
                         </div>
 
