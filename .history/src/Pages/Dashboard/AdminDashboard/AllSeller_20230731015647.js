@@ -6,7 +6,7 @@ import Loading from '../../Shared/Loading/Loading';
 const AllSeller = () => {
     const [deletingUser, setDeletingUser] = useState(null)
     useTitle("All Seller")
-    const url = "http://localhost:5000/users?role=seller"
+    const url = "https://resale-market-server-wahid137.vercel.app/users?role=seller"
 
     const { data: users = [], isLoading } = useQuery({
         queryKey: ['users'],

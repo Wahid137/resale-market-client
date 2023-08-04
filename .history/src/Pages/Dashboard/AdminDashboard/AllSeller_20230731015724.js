@@ -11,7 +11,7 @@ const AllSeller = () => {
         setDeletingUser(null)
     }
 
-    const url = "http://localhost:5000/users?role=seller"
+    const url = "https://resale-market-server-wahid137.vercel.app/users?role=seller"
 
     const { data: users = [], isLoading } = useQuery({
         queryKey: ['users'],
@@ -31,7 +31,7 @@ const AllSeller = () => {
     }
 
     const handleMakeAdmin = id => {
-        fetch(`http://localhost:5000/users/admin/${id}`, {
+        fetch(`https://resale-market-server-wahid137.vercel.app/users/admin/${id}`, {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

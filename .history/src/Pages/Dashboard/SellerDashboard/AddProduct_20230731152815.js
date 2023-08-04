@@ -33,7 +33,7 @@ const AddProduct = () => {
                     }
                     console.log(product)
                     //save add service's information in database
-                    fetch('http://localhost:5000/dashboard/addproduct', {
+                    fetch('https://resale-market-server-wahid137.vercel.app/dashboard/addproduct', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

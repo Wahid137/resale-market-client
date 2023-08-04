@@ -7,7 +7,7 @@ import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
 const CategoryCard = ({ product, setVerify, verify }) => {
     const { image, productName, location, resalePrice, originalPrice, year, time, email } = product
     console.log(verify.name)
-    const url = `http://localhost:5000/users?email=${email}`
+    const url = `https://resale-market-server-wahid137.vercel.app/users?email=${email}`
 
     const { data: users = [], isLoading } = useQuery({
         queryKey: ['users'],

@@ -14,7 +14,7 @@ const MakeAdmin = () => {
 
 
     const handleAdmin = (data) => {
-        fetch(`http://localhost:5000/users/admin/${data.email}`, {
+        fetch(`https://resale-market-server-wahid137.vercel.app/users/admin/${data.email}`, {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

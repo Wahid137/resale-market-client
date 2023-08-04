@@ -3,7 +3,7 @@ import useTitle from '../../../hooks/useTitle';
 
 const AllSeller = () => {
     useTitle("All Seller")
-    const url = `http://localhost:5000/users?role='seller'`
+    const url = `https://resale-market-server-wahid137.vercel.app/users?role='seller'`
 
     const { data: bookings = [], isLoading } = useQuery({
         queryKey: ['bookings', user?.email],

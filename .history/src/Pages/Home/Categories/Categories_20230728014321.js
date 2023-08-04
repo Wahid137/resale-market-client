@@ -6,7 +6,7 @@ import Category from './Category';
 const Categories = () => {
     const { data: categories = [], isLoading } = useQuery({
         queryKey: ['categories'],
-        queryFn: () => fetch('http://localhost:5000/categories')
+        queryFn: () => fetch('https://resale-market-server-wahid137.vercel.app/categories')
             .then(res => res.json())
     })
 

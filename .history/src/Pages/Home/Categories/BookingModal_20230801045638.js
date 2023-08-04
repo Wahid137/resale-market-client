@@ -29,7 +29,7 @@ const BookingModal = ({ modalInfo, setModalInfo }) => {
              price
          }
          console.log(booking)
-         fetch('http://localhost:5000/bookings', {
+         fetch('https://resale-market-server-wahid137.vercel.app/bookings', {
              method: 'POST',
              headers: {
                  'content-type': 'application/json'

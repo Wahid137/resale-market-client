@@ -5,7 +5,7 @@ import Loading from '../../Shared/Loading/Loading';
 
 const AllBuyer = () => {
     useTitle("All Buyer")
-    /*  const url = "http://localhost:5000/users?role=buyer"
+    /*  const url = "https://resale-market-server-wahid137.vercel.app/users?role=buyer"
  
      const { data: buyers = [], isLoading } = useQuery({
          queryKey: ['buyers'],

@@ -41,7 +41,7 @@ const router = createBrowserRouter([
             {
                 path: '/category/:type',
                 element: <CategoryCards></CategoryCards>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.type}`)
+                loader: ({ params }) => fetch(`https://resale-market-server-wahid137.vercel.app/category/${params.type}`)
 
             },
             {
