@@ -4,6 +4,7 @@ import CategoryCard from './CategoryCard';
 import { toast } from 'react-hot-toast';
 
 const CategoryCards = () => {
+    const [totalProducts, setTotalProducts] = useState([])
     const [setModalInfo] = useState(null)
     const products = useLoaderData();
 
@@ -19,6 +20,7 @@ const CategoryCards = () => {
             .then(data => {
                 if (data.modifiedCount > 0) {
                     toast.success(`${product.productName} is reported successfully!`)
+
                 }
             })
 

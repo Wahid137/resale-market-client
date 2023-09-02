@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import BookingModal from './BookingModal';
-import { toast } from 'react-hot-toast';
 
 
-const CategoryCard = ({ product, handleUpdateProduct }) => {
-    const { image, productName, location, resalePrice, originalPrice, year, time, userName, userType, report } = product
+const CategoryCard = ({ product, setVerify, verify }) => {
+    const { image, productName, location, resalePrice, originalPrice, year, time, userName, userType } = product
     const [isOpenModal, setIsModalOpen] = useState(false)
-
-
 
 
 
@@ -61,12 +58,16 @@ const CategoryCard = ({ product, handleUpdateProduct }) => {
                 <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-900"></hr>
                 <div className='mx-auto'>
                     {
-                        report !== "yes" && <label onClick={() => handleUpdateProduct(product)} className="btn btn-primary">Report This Product</label>
+                        situation !== "advertised" && <button onClick={() => handleUpdateProduct(product)} className='btn btn-sm w-1/2 mx-auto btn-secondary'>Advertise</button>
                     }
                     {
-                        report === "yes" && <label className="btn btn-primary">Reported</label>
+                        situation === "advertised" && <button onClick={() => handleUpdateProduct(product)} className='btn btn-sm w-1/2 mx-auto btn-accent'>Advertised</button>
                     }
-
+                    <label
+                        className="btn btn-primary"
+                    >
+                        Report This Product
+                    </label>
                 </div>
 
             </div>

@@ -4,6 +4,7 @@ import CategoryCard from './CategoryCard';
 import { toast } from 'react-hot-toast';
 
 const CategoryCards = () => {
+    const [totalProducts, setTotalProducts] = useState([])
     const [setModalInfo] = useState(null)
     const products = useLoaderData();
 

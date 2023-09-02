@@ -1,29 +1,11 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import CategoryCard from './CategoryCard';
-import { toast } from 'react-hot-toast';
 
 const CategoryCards = () => {
-    const [setModalInfo] = useState(null)
+    const [modalInfo, setModalInfo] = useState(null)
+    const [verify, setVerify] = useState('')
     const products = useLoaderData();
-
-    const handleUpdateProduct = product => {
-        console.log(product)
-        fetch(`http://localhost:5000/dashboard/reportedproduct/${product._id}`, {
-            method: 'PUT',
-            headers: {
-                authorization: `bearer ${localStorage.getItem('accessToken')}`
-            }
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.modifiedCount > 0) {
-                    toast.success(`${product.productName} is reported successfully!`)
-                }
-            })
-
-    }
-
 
 
     return (
@@ -35,7 +17,8 @@ const CategoryCards = () => {
                             i={i}
                             key={product._id}
                             product={product}
-                            handleUpdateProduct={handleUpdateProduct}
+                            setVerify={setVerify}
+                            verify={verify}
                             setModalInfo={setModalInfo}
                         ></CategoryCard>)
 

@@ -19,6 +19,7 @@ const CategoryCards = () => {
             .then(data => {
                 if (data.modifiedCount > 0) {
                     toast.success(`${product.productName} is reported successfully!`)
+
                 }
             })
 

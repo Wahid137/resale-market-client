@@ -3,12 +3,29 @@ import BookingModal from './BookingModal';
 import { toast } from 'react-hot-toast';
 
 
-const CategoryCard = ({ product, handleUpdateProduct }) => {
+const CategoryCard = ({ product, refetch }) => {
     const { image, productName, location, resalePrice, originalPrice, year, time, userName, userType, report } = product
     const [isOpenModal, setIsModalOpen] = useState(false)
 
 
 
+    const handleUpdateProduct = product => {
+        console.log(product)
+        fetch(`http://localhost:5000/dashboard/reportedproduct/${product._id}`, {
+            method: 'PUT',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    toast.success(`${product.productName} is reported successfully!`)
+                    refetch()
+                }
+            })
+
+    }
 
 
 

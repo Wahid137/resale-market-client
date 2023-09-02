@@ -9,7 +9,18 @@ const Dashboard = () => {
     const url = "https://resale-market-server-wahid137.vercel.app/users?role=seller"
 
 
-
+    const { data: allproducts = [], refetch, isLoading } = useQuery({
+        queryKey: ['allproducts'],
+        queryFn: async () => {
+            const res = await fetch(url, {
+                headers: {
+                    authorization: `bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+            const data = await res.json()
+            return data;
+        }
+    })
 
     const { data: users = [], refetch, isLoading } = useQuery({
         queryKey: ['users'],
@@ -52,14 +63,6 @@ const Dashboard = () => {
         }
     })
 
-    const { data: allproducts = [] } = useQuery({
-        queryKey: ['allproducts'],
-        queryFn: async () => {
-            const res = await fetch('http://localhost:5000/allproduct')
-            const data = await res.json()
-            return data;
-        }
-    })
 
 
     if (isLoading) {
@@ -75,36 +78,30 @@ const Dashboard = () => {
                 <h2 className='text-2xl font-bold mb-10'>WelCome! to LARANA Bike Store's Dashboard</h2>
                 <div className='bg-warning p-5'>
 
-
-                    <div className="w-full max-w-sm mb-5">
-                        <label className="label">
-                            <span className="label-text text-accent font-bold">Total Seller: {users.length}</span>
-                        </label>
-                        <input type="range" min={0} max="100" value={users.length} className="range range-secondary" />
-                    </div>
-
                     <div className="w-full max-w-sm mb-5">
                         <label className="label">
                             <span className="label-text text-accent font-bold">Total Buyers: {buyers.length}</span>
                         </label>
                         <input type="range" min={0} max="100" value={buyers.length} className="range range-secondary" />
                     </div>
-
                     <div className="w-full max-w-sm mb-5">
                         <label className="label">
-                            <span className="label-text text-accent font-bold">Total Product: {allproducts.length}</span>
+                            <span className="label-text text-accent font-bold">Total Seller: {users.length}</span>
                         </label>
-                        <input type="range" min={0} max="100" value={allproducts.length} className="range range-secondary" />
+                        <input type="range" min={0} max="100" value={users.length} className="range range-secondary" />
                     </div>
-
+                    {/*   <div className="w-full max-w-sm mb-5">
+                        <label className="label">
+                            <span className="label-text text-accent font-bold">Total Product: </span>
+                        </label>
+                        <input type="range" min={0} max="100" value="10" className="range range-secondary" />
+                    </div> */}
                     <div className="w-full max-w-sm mb-5">
                         <label className="label">
                             <span className="label-text text-accent font-bold">Total Product Category: {categories.length}</span>
                         </label>
                         <input type="range" min={0} max="100" value={categories.length} className="range range-secondary" />
                     </div>
-
-
 
 
                 </div>

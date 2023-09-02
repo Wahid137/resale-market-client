@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import BookingModal from './BookingModal';
-import { toast } from 'react-hot-toast';
 
 
-const CategoryCard = ({ product, handleUpdateProduct }) => {
-    const { image, productName, location, resalePrice, originalPrice, year, time, userName, userType, report } = product
+const CategoryCard = ({ product, setVerify, verify }) => {
+    const { image, productName, location, resalePrice, originalPrice, year, time, userName, userType } = product
     const [isOpenModal, setIsModalOpen] = useState(false)
-
-
 
 
 
@@ -47,7 +44,7 @@ const CategoryCard = ({ product, handleUpdateProduct }) => {
 
             }
             <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-900"></hr>
-            <div className="justify-center flex flex-col">
+            <div className="card-actions justify-center flex flex-col">
                 {/* The button to open modal */}
                 <div className='mx-auto'>
                     <label
@@ -59,18 +56,15 @@ const CategoryCard = ({ product, handleUpdateProduct }) => {
                     </label>
                 </div>
                 <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-900"></hr>
+
                 <div className='mx-auto'>
-                    {
-                        report !== "yes" && <label onClick={() => handleUpdateProduct(product)} className="btn btn-primary">Report This Product</label>
-                    }
-                    {
-                        report === "yes" && <label className="btn btn-primary">Reported</label>
-                    }
-
+                    <label
+                        className="btn btn-secondary"
+                    >
+                        Report This Product
+                    </label>
                 </div>
-
             </div>
-
         </div>
 
         <BookingModal

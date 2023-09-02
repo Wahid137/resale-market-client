@@ -96,7 +96,6 @@ const Dashboard = () => {
                         </label>
                         <input type="range" min={0} max="100" value={allproducts.length} className="range range-secondary" />
                     </div>
-
                     <div className="w-full max-w-sm mb-5">
                         <label className="label">
                             <span className="label-text text-accent font-bold">Total Product Category: {categories.length}</span>

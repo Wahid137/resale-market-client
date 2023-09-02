@@ -75,7 +75,12 @@ const Dashboard = () => {
                 <h2 className='text-2xl font-bold mb-10'>WelCome! to LARANA Bike Store's Dashboard</h2>
                 <div className='bg-warning p-5'>
 
-
+                    <div className="w-full max-w-sm mb-5">
+                        <label className="label">
+                            <span className="label-text text-accent font-bold">Total Buyers: {buyers.length}</span>
+                        </label>
+                        <input type="range" min={0} max="100" value={buyers.length} className="range range-secondary" />
+                    </div>
                     <div className="w-full max-w-sm mb-5">
                         <label className="label">
                             <span className="label-text text-accent font-bold">Total Seller: {users.length}</span>
@@ -85,9 +90,9 @@ const Dashboard = () => {
 
                     <div className="w-full max-w-sm mb-5">
                         <label className="label">
-                            <span className="label-text text-accent font-bold">Total Buyers: {buyers.length}</span>
+                            <span className="label-text text-accent font-bold">Total Product Category: {categories.length}</span>
                         </label>
-                        <input type="range" min={0} max="100" value={buyers.length} className="range range-secondary" />
+                        <input type="range" min={0} max="100" value={categories.length} className="range range-secondary" />
                     </div>
 
                     <div className="w-full max-w-sm mb-5">
@@ -96,15 +101,6 @@ const Dashboard = () => {
                         </label>
                         <input type="range" min={0} max="100" value={allproducts.length} className="range range-secondary" />
                     </div>
-
-                    <div className="w-full max-w-sm mb-5">
-                        <label className="label">
-                            <span className="label-text text-accent font-bold">Total Product Category: {categories.length}</span>
-                        </label>
-                        <input type="range" min={0} max="100" value={categories.length} className="range range-secondary" />
-                    </div>
-
-
 
 
                 </div>

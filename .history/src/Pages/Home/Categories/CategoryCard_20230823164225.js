@@ -1,14 +1,28 @@
 import React, { useState } from 'react';
 import BookingModal from './BookingModal';
-import { toast } from 'react-hot-toast';
 
 
-const CategoryCard = ({ product, handleUpdateProduct }) => {
+const CategoryCard = ({ product, setVerify, verify }) => {
     const { image, productName, location, resalePrice, originalPrice, year, time, userName, userType, report } = product
     const [isOpenModal, setIsModalOpen] = useState(false)
 
+    const handleUpdateProduct = product => {
+        console.log(product)
+        fetch(`https://resale-market-server-wahid137.vercel.app/dashboard/addproduct/${product._id}`, {
+            method: 'PUT',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    toast.success(`${product.productName} is added to Advertised Items`)
+                    refetch();
+                }
+            })
 
-
+    }
 
 
 
@@ -64,7 +78,7 @@ const CategoryCard = ({ product, handleUpdateProduct }) => {
                         report !== "yes" && <label onClick={() => handleUpdateProduct(product)} className="btn btn-primary">Report This Product</label>
                     }
                     {
-                        report === "yes" && <label className="btn btn-primary">Reported</label>
+                        report === "false" && <label className="btn btn-primary">Reported</label>
                     }
 
                 </div>
