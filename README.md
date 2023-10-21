@@ -2,7 +2,8 @@
 
 ## Hello welcome to [larana-bike-store](https://resale-market-de8bd.web.app/).
 
-## Available Scripts
+## Table of Content
+.[Live Server](https://resale-market-de8bd.web.app/)
 
 In the project directory, you can run:
 
