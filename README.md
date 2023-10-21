@@ -12,6 +12,6 @@ https://resale-market-de8bd.web.app/
 
 ## How to run
 
-1. #### Clone the Repository
+1. Clone the Repository
 ```bash
 git clone https://github.com/Wahid137/resale-market-client.git
