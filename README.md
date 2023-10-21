@@ -3,11 +3,12 @@
 ## Hello welcome to [larana-bike-store](https://resale-market-de8bd.web.app/).
 
 ## Table of Content
-- [Live Server](https://resale-market-de8bd.web.app/)
+- [Live Server](#live-server)
 - [How to run](#how-to-run)
 - [About Project](#about-project)
 
-In the project directory, you can run:
+## Live Server
+(https://resale-market-de8bd.web.app/)
 
 ### `npm start`
 
