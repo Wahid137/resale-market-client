@@ -12,18 +12,6 @@ https://resale-market-de8bd.web.app/
 
 ## How to run
 
-
-## Getting Started
-
-### Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-- Git is installed. If not, you can download it from [Git](https://git-scm.com/downloads).
-- Yarn is installed. If not, you can install it using [Yarn](https://classic.yarnpkg.com/en/docs/install/).
-
-### Clone the Repository
-
-First, clone this repository to your local machine using the following command:
-
+1. #### Clone the Repository
 ```bash
-git clone https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-mehedisarkar2k
+git clone https://github.com/Wahid137/resale-market-client.git
