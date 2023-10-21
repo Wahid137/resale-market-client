@@ -16,6 +16,9 @@ https://resale-market-de8bd.web.app/
 ```bash
 git clone https://github.com/Wahid137/resale-market-client.git
 
+cd tourism-or-delivery-website-client-side-mehedisarkar2k
+
+
 2. Run
 ```bash
 npm
