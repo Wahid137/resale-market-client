@@ -3,7 +3,8 @@
 ## Hello welcome to [larana-bike-store](https://resale-market-de8bd.web.app/).
 
 ## Table of Content
-.[Live Server](https://resale-market-de8bd.web.app/)
+- [Live Server](https://resale-market-de8bd.web.app/)
+- [Project Name](#project-name)
 
 In the project directory, you can run:
 
