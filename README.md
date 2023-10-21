@@ -15,14 +15,17 @@ https://resale-market-de8bd.web.app/
 1. Clone the Repository
 ```bash
 git clone https://github.com/Wahid137/resale-market-client.git<br/>
+```
 
 
 2. Run
 ```bash
 npm
+```
 
 3. Then run to see project in live server
 ```bash
 npm start
+```
 
 4. This app should be available in http://localhost:3000/
