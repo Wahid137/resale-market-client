@@ -4,7 +4,8 @@
 
 ## Table of Content
 - [Live Server](https://resale-market-de8bd.web.app/)
-- [Project Name](#project-name)
+- [How to run](#how-to-run)
+- [About Project](#about-project)
 
 In the project directory, you can run:
 
