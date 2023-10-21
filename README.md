@@ -14,9 +14,7 @@ https://resale-market-de8bd.web.app/
 
 1. Clone the Repository
 ```bash
-git clone https://github.com/Wahid137/resale-market-client.git
-
-cd tourism-or-delivery-website-client-side-mehedisarkar2k
+git clone https://github.com/Wahid137/resale-market-client.git<br/>
 
 
 2. Run
