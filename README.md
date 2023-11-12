@@ -14,7 +14,7 @@ https://resale-market-de8bd.web.app/
 
 1. Clone the Repository
 ```bash
-git clone https://github.com/Wahid137/resale-market-client.git<br/>
+git clone https://github.com/Wahid137/resale-market-client.git
 ```
 
 2. Run
