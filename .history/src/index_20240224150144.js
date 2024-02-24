@@ -15,7 +15,7 @@ root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <App data-theme="white" />
+        <App data-theme="dark" />
       </AuthProvider>
     </QueryClientProvider>
   </React.StrictMode>

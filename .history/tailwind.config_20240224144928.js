@@ -5,6 +5,9 @@ module.exports = {
   ],
   daisyui: {
     themes: [
+      "light",
+      "dark",
+      "cupcake",
       {
         cycleTheme: {
           primary: '#ED5E68',
@@ -13,9 +16,7 @@ module.exports = {
           neutral: '#1F2833',
           info: '#F9FAFB',
           warning: '#F0FDFA',
-          error: '#444B53',
-          "cupcake": '#ECE3CA',
-
+          error: '#444B53'
         }
       }
     ]
@@ -25,4 +26,3 @@ module.exports = {
   },
   plugins: [require("daisyui")],
 }
-

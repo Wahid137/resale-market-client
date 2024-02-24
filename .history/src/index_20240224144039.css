@@ -1,10 +1,10 @@
+html {
+  background-color: white;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-html {
-  background-color: white !important;
-}
 
 body {
   margin: 0;

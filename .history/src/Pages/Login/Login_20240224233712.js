@@ -79,7 +79,7 @@ const Login = () => {
                         <p>Password: W@hid1</p>
                         <p className='text-primary'>Don't misuse the admin's power</p>
                     </div>
-                    <h2 className='text-xl font-bold text-center my-8'>Login</h2>
+                    <h2 className='text-xl font-bold text-center my-12'>Login</h2>
                     <div className="form-control w-full mb-8 relative">
                         <input type="text"
                             {...register("email", { required: "Email Address is required" })}

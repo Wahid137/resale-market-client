@@ -67,7 +67,7 @@ const Login = () => {
 
         <div className=" flex justify-center items-center h-[780px] bg-teal-50">
             <div className='card shadow-xl bg-white'>
-                <form className=" w-[500px] pt-10 px-10" onSubmit={handleSubmit(handleLogin)}>
+                <form className=" w-[500px] pt-10" onSubmit={handleSubmit(handleLogin)}>
                     <Link to='/'>
                         <div className='absolute top-2 left-0 px-5 pt-5 animate-bounce duration-100'>
                             <img src={cross} alt="" className='w-6' />
@@ -79,7 +79,7 @@ const Login = () => {
                         <p>Password: W@hid1</p>
                         <p className='text-primary'>Don't misuse the admin's power</p>
                     </div>
-                    <h2 className='text-xl font-bold text-center my-8'>Login</h2>
+                    <h2 className='text-xl font-bold text-center my-12'>Login</h2>
                     <div className="form-control w-full mb-8 relative">
                         <input type="text"
                             {...register("email", { required: "Email Address is required" })}

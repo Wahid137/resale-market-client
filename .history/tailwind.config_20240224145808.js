@@ -14,7 +14,7 @@ module.exports = {
           info: '#F9FAFB',
           warning: '#F0FDFA',
           error: '#444B53',
-          "cupcake": '#ECE3CA',
+          cake: '#ECE3CA',
 
         }
       }

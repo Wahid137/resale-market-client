@@ -14,15 +14,15 @@ module.exports = {
           info: '#F9FAFB',
           warning: '#F0FDFA',
           error: '#444B53',
-          "cupcake": '#ECE3CA',
+          cup- cake: '#ECE3CA',
 
-        }
+      }
       }
     ]
-  },
+},
   theme: {
-    extend: {},
-  },
-  plugins: [require("daisyui")],
+  extend: { },
+},
+plugins: [require("daisyui")],
 }
 

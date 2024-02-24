@@ -13,7 +13,7 @@ module.exports = {
           neutral: '#1F2833',
           info: '#F9FAFB',
           warning: '#F0FDFA',
-          error: '#444B53',
+          error: '#444B53'
           "cupcake": '#ECE3CA',
 
         }
