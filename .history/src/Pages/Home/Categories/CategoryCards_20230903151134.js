@@ -4,11 +4,10 @@ import CategoryCard from './CategoryCard';
 import { toast } from 'react-hot-toast';
 
 const CategoryCards = () => {
-    // const [finalProducts, setFinalProducts] = useState([])
+    const [finalProducts, setFinalProducts] = useState([])
     const [setModalInfo] = useState(null)
     const products = useLoaderData();
-    const finalProducts = [...products]
-
+    setFinalProducts(products)
 
     const handleUpdateProduct = product => {
         console.log(product)
@@ -16,8 +15,7 @@ const CategoryCards = () => {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
-            },
-            body: JSON.stringify({ report: "yes" })
+            }
         })
             .then(res => res.json())
             .then(data => {
@@ -26,7 +24,7 @@ const CategoryCards = () => {
                     const reported = finalProducts.find(pdt => pdt._id === product.id)
                     reported.report = "yes"
                     const newProducts = [reported, ...remaining]
-                    finalProducts(...newProducts)
+                    setFinalProducts(newProducts)
                     toast.success(`${finalProducts.productName} is reported successfully!`)
                 }
             })

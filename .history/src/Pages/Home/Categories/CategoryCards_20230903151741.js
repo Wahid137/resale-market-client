@@ -16,8 +16,7 @@ const CategoryCards = () => {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
-            },
-            body: JSON.stringify({ report: "yes" })
+            }
         })
             .then(res => res.json())
             .then(data => {
@@ -44,7 +43,7 @@ const CategoryCards = () => {
                             i={i}
                             key={product._id}
                             product={product}
-                            handleUpdateProduct={handleUpdateProduct}
+                            //handleUpdateProduct={handleUpdateProduct}
                             setModalInfo={setModalInfo}
                         ></CategoryCard>)
 

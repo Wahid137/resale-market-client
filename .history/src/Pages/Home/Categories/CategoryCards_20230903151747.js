@@ -16,8 +16,7 @@ const CategoryCards = () => {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
-            },
-            body: JSON.stringify({ report: "yes" })
+            }
         })
             .then(res => res.json())
             .then(data => {
